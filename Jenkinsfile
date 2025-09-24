@@ -14,12 +14,12 @@ pipeline{
         }
         stage ("Memory details"){
             steps{
-                sh 'free-h'
+                sh 'free -h'
             }
         }
         stage ('Disk details'){
             steps{
-                sh 'df-h'
+                sh 'df -h'
             }
         }
         stage ("Network details"){
@@ -29,7 +29,7 @@ pipeline{
         }
         stage ("IP address details"){
             steps{
-                sh 'hostname-I'
+                sh 'hostname -I'
             }
         }
     }
